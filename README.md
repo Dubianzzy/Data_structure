@@ -78,13 +78,9 @@ else
 printf("\n 未能匹配模式串");
 }
 ```
-==========测试 1================
-请输⼊主串:hello xxzhii howxxz
-请输⼊模式串:xxz
-请输⼊替换串: abcd
-最终结果是: hello abcdhii howabcd
-===========测试 2===============
-请输⼊主串:abc-abc-abc
-请输⼊模式串:-
-请输⼊替换串: --
-最终结果是: abc--abc--abc  
+==========测试 1================            ===========测试 2===============  
+请输⼊主串:hello xxzhii howxxz              请输⼊主串:abc-abc-abc  
+请输⼊模式串:xxz                            请输⼊模式串:-  
+请输⼊替换串: abcd                          请输⼊替换串: --  
+最终结果是: hello abcdhii howabcd           最终结果是: abc--abc--abc  
+
