@@ -41,4 +41,50 @@ typedef struct queue {
 Node * front;
 Node * rear;
 } Que
+```  
+
+### HW5  
+
+#### 设计并编程实现串的操作  
+
+1. 从键盘读取⼀个字符串 S（即，主串），⼀个模式字符串 T（即，要在主串中查找的字符串）和⼀个替换字符串 REP（即，⽤来替换掉主串中匹配出的 T 串）。
+2. 完成模式匹配功能，找到主串 S 中所有出现 T 的地⽅，并⽤ REP 进⾏替换（假定S中不会出现两个连续的T交叠的现象，每个T都单独出现，例如：
 ```
+T=aba
+S=ababa
+```
+那么 T 在 S 中就出现了交叠现象，第⼀个 T 是从 0 号下标开始，第⼆个 T 是从 2 号下标开始，在第⼀个 T 还没有结束前就开始了第⼆个 T，两个T有公有的部分，形成了交叠现象，本实验的输⼊假定没有交叠现象）。
+3. 模式匹配功能的实现可以利⽤ BF 蛮⼒法，如果蛮⼒法能通过测试，可尝试使⽤ KMP 算法完成模式匹配。
+代码框架如下：
+```c
+#include<stdio.h>
+char S[50], T[20], rep[20], ans[50];
+int stringmatch()
+{
+// 请填充代码
+}
+int main()
+{
+int found = 0;
+printf("\n 请输⼊主串:");gets(S);
+printf("\n 请输⼊模式串:");
+gets(T);
+printf("\n 请输⼊替换串:");
+gets(rep);
+found = stringmatch();
+if(found)
+printf("\n 最终结果是 %s", ans);
+else
+printf("\n 未能匹配模式串");
+}
+```
+==========测试 1================
+请输⼊主串:hello xxzhii howxxz
+请输⼊模式串:xxz
+请输⼊替换串: abcd
+最终结果是: hello abcdhii howabcd
+===========测试 2===============
+请输⼊主串:abc-abc-abc
+请输⼊模式串:-
+请输⼊替换串: --
+最终结果是: abc--abc--abc  
